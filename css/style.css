@@ -1,8 +1,6 @@
 /* change these */
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,21 +12,23 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: white;
+  --link-color: rgb(83, 155, 250);
+  --link-hover-color: rgb(23, 124, 255);
+  --color-4: rgb(161, 122, 251);
+  --color-5: rgb(173, 90, 41);
+  --color-6: rgb(134, 195, 99);
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --primary-font:  "Roboto", sans-serif;
+  --secondary-font: "Lato", sans-serif;;
+  --main-text-color: white;
 
   --white-space: 1rem;
 }
+body{ background-color: black;}
 
 button {
-  transition: all 3s;
+  transition: all 2s ease-in-out;
 }
 
 a {
@@ -36,8 +36,9 @@ a {
 }
 
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  box-shadow: 0px 1px 2px lightgray;
+  border-style:inset;
+  transform: scale(0.9) ;
 }
 
 button:active {
@@ -46,7 +47,7 @@ button:active {
 
 a:hover {
   color: var(--link-hover-color);
-  font-size: 4rem;
+ 
 }
 html {
   font-size: 100%;
@@ -68,33 +69,39 @@ footer {
 
 .full-width {
   background: var(--bg-color);
-  color: white;
+  color: black;
   width: 100%;
 }
+.header-wrapper {background-color: black; border-bottom: white dashed 4px; border-top: white solid 3px;}
 
 .header-wrapper h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
   padding-right: 0.75em;
   font-weight: bold;
-  color: white;
+  color: var(  --color-4);
+  text-align: center;
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(  --color-5);
   font-weight: bold;
   margin: var(--white-space) 0;
+  text-align: left;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
+  color: var(  --color-6);
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  text-decoration:underline;
+  color: var(  --color-6);
 }
 
 main {
@@ -108,7 +115,7 @@ section {
 .section-heading {
   font-style: italic;
   font-size: 1.3rem;
-  color: #777;
+  color: white;
   margin: 0.5rem 0;
 }
 
@@ -129,40 +136,51 @@ ul li:last-child {
 
 .color-swatch-1 {
   background-color: var(--bg-color);
+  border-radius: 10px;
 }
 
 .color-swatch-2 {
   background-color: var(--link-color);
+  border-radius: 10px;
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-6);
+  border-radius: 10px;
 }
 
 .color-swatch-4 {
   background-color: var(--color-4);
+  border-radius: 10px;
 }
 
 .color-swatch-5 {
   background-color: var(--color-5);
+  border-radius: 10px;
 }
 
 .textures li {
   height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
+  width: 80%;
+  margin-right: 4vw;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/logo1.png) top left;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/logo1.png) center ;
+  
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/logo2.png) center ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 
 .texture-swatch-3 {
@@ -182,22 +200,28 @@ ul li:last-child {
 
 button {
   padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
+  border-radius: 6px;
+  background:rgb(240, 238, 238);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font:  1.25em/1 var(--primary-font);
   letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
+  color: black;
+  
+  text-shadow: 0px -1px 0px lightgray;
   transition: all 0.2s ease;
   cursor: pointer;
+  border: 3px  black;
+  border-style: outset;
+  box-shadow: 0px 3px 5px lightgray;
   margin: 0 1rem 0 0; /* 22S - 0 margin-bottom mobile */
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: black;
+color: white;
+text-shadow: 0px -1px 0px lightgray;
+box-shadow: 0px 3px 5px darkgray;
 }
 
 button:focus,
@@ -214,12 +238,15 @@ button:focus-within {
 .h1-sample {
   font-size: 2.4rem;
   font-weight: bold;
+  color: var(--color-5);
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
   font-style: italic;
   font-size: 1.25rem;
+  color: var(--color-6);
+  
 }
 
 p.typography-sample {
@@ -240,7 +267,7 @@ a {
   font-family: var(--primary-font);
   color: var(--link-color);
   font-weight: bold;
-  text-decoration: none;
+  
   transition: all 0.2s;
 }
 
@@ -254,7 +281,13 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   font-size: 2rem;
-  opacity: 0.5;
+  
+}
+.adjectives ul li {
+  font-size: 2rem;
+  font-weight: bold;
+
+  color:var(--color-6) ;
 }
 
 .adjectives ul {
